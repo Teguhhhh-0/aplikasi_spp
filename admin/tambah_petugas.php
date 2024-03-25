@@ -1,5 +1,7 @@
 <?php
 
+include '../config/config.php';
+
 if (isset ($_POST["submit"])) {
     $username = $_POST["username"];
     $nama = $_POST["nama"];
@@ -34,12 +36,10 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../css/output.css">
+    <link rel="stylesheet" href="../css/index.css">
 </head>
 
 <body>
-    <!-- component -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
     <body class="bg-gray-100">
         <div class="mx-auto py-8">
             <form action="" method="post" class="w-full max-w-sm mx-auto bg-white p-8 rounded-md shadow-md">

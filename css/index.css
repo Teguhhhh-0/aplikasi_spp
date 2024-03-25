@@ -1,6 +1,15 @@
+.container {
+	display: none;
+}
 .container.show {
 	display: block;
 }
-.container {
-	display: none;
+
+@media screen and (max-width: 576px) {
+	.nav {
+		display: none;
+	}
+	.nav.active {
+		display: block;
+	}
 }

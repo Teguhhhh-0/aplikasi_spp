@@ -9,8 +9,7 @@
 </head>
 
 <body>
-    <?php include 'login_proses.php'; ?>
-    <form action="" method="post">
+    <form action="login_proses.php" method="post">
         <div class="min-h-screen bg-gray-100 flex flex-col justify-center sm:py-12">
             <div class="p-10 xs:p-0 mx-auto md:w-full md:max-w-md">
                 <img src="../public/image/logo17.png" alt="" class="w-14 h-14 mx-auto -translate-y-5">

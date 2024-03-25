@@ -1,12 +1,10 @@
 <?php
 require '../../config/config.php';
-// var_dump($_POST);
 
 if ($conn->connect_error) {
     die ("Koneksi gagal: " . $conn->connect_error);
 }
 
-// Proses update data
 if (isset ($_POST['submit'])) {
     $id_petugas = $_POST['id_petugas'];
     $username = $_POST['username'];
@@ -23,7 +21,6 @@ if (isset ($_POST['submit'])) {
     }
 }
 
-// Ambil data petugas yang akan di-edit
 $id_petugas = $_GET['id_petugas'];
 $sql = "SELECT * FROM petugas WHERE id_petugas=$id_petugas";
 $result = $conn->query($sql);
