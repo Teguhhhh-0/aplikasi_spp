@@ -57,19 +57,19 @@ $conn->close();
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="username">Username</label>
                 <input
                     class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
-                    type="text" id="username" name="username" value="<?= $username; ?>">
+                    type="text" id="username" name="username" value="<?= $username; ?>" required>
             </div>
             <div class="mb-4">
                 <label class="block text-gray-700 text-sm font-bold mb-2" for="nama_petugas">Nama</label>
                 <input
                     class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
-                    type="text" id="nama_petugas" name="nama_petugas" value="<?= $nama_petugas; ?>">
+                    type="text" id="nama_petugas" name="nama_petugas" value="<?= $nama_petugas; ?>" required>
             </div>
             <div class="mb-4">
                 <label for="level" class="block text-gray-700 text-sm font-bold mb-2">Level</label>
                 <select type="text" name="level"
                     class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-indigo-500"
-                    id="">
+                    required id="">
                     <option>---</option>
                     <option value="admin" <?= ($level == 'admin') ? 'selected' : ''; ?>>Admin</option>
                     <option value="petugas" <?= ($level == 'petugas') ? 'selected' : ''; ?>>Petugas</option>

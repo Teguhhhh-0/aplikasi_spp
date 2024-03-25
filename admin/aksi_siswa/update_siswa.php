@@ -80,7 +80,7 @@ $conn->close();
                                 NISN
                             </label>
                             <input type="number" name="nisn" id="nisn"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" value="<?= $nisn ?>"/>
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" value="<?= $nisn ?>" required/>
                         </div>
                     </div>
                     <div class="w-full px-3 sm:w-1/2">
@@ -89,7 +89,7 @@ $conn->close();
                                 NIS
                             </label>
                             <input type="number" name="nis" id="nis"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" value="<?= $nis ?>"/>
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" value="<?= $nis ?>" required/>
                         </div>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ $conn->close();
                         ALAMAT
                     </label>
                     <input type="text" name="alamat" id="alamat"
-                        class="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" value="<?= $alamat ?>"/>
+                        class="w-full appearance-none rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" value="<?= $alamat ?>" required/>
                 </div>
 
                 <div class="-mx-3 flex flex-wrap">
@@ -108,7 +108,7 @@ $conn->close();
                                 KELAS
                             </label>
                             <select name="id_kelas" id="id_kelas"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" required>
                                 <option disabled selected>Select your option</option>
                 <?php while ($row = $result_kelas->fetch_assoc()) { ?>
                                     <option value="<?php echo $row['id_kelas']; ?>">
@@ -147,7 +147,7 @@ $conn->close();
                                 ID SPP
                             </label>
                             <select name="id_spp" id="id_spp"
-                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md">
+                                class="w-full rounded-md border border-[#e0e0e0] bg-white py-3 px-6 text-base font-medium text-[#6B7280] outline-none focus:border-[#6A64F1] focus:shadow-md" required>
                                 <?php while ($row = $result_spp->fetch_assoc()) { ?>
                                     <option value="<?php echo $row['id_spp']; ?>">
                                         <?php echo $row['id_spp'] . ' ' . $row['nominal'] . ' ' . $row['tahun']; ?>
