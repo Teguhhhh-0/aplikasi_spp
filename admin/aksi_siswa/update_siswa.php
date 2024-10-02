@@ -18,18 +18,25 @@ if (isset ($_POST['submit'])) {
     $nisn = $_POST['nisn'];
     $nis = $_POST['nis'];
     $nama = $_POST['nama'];
-    $id_kelas = $_POST["id_kelas"];
+    $id_kelas = !empty($_POST["id_kelas"]) ? $_POST["id_kelas"] : null;
     $alamat = $_POST["alamat"];
     $no_telp = $_POST["no_telp"];
     $id_spp = $_POST["id_spp"];
 
-    $sql = "UPDATE siswa SET nis='$nis',nama='$nama', id_kelas='$id_kelas',alamat='$alamat',no_telp='$no_telp', id_spp='$id_spp' WHERE nisn=$nisn";
-
-    if ($conn->query($sql) === TRUE) {
-        echo '<script> document.location.href = "../siswa.php"; </script>';
-        echo "Data Berhasil di Update";
+    if ($id_kelas === null) {
+        echo "Error: ID Kelas harus dipilih.";
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        $sql = "UPDATE siswa SET nis=?, nama=?, id_kelas=?, alamat=?, no_telp=?, id_spp=? WHERE nisn=?";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssisssi", $nis, $nama, $id_kelas, $alamat, $no_telp, $id_spp, $nisn);
+
+        if ($stmt->execute()) {
+            echo '<script> document.location.href = "../siswa.php"; </script>';
+            echo "Data Berhasil di Update";
+        } else {
+            echo "Error: " . $stmt->error;
+        }
+        $stmt->close();
     }
 }
 
