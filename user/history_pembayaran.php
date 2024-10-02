@@ -92,7 +92,7 @@
                 </table>
                 <div class="flex justify-center gap-7">
                     <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-                        href="petugas/petugas_dashboard.php" role="button">Input Pembayaran Lain</a>
+                        href="pembayaran.php" role="button">Input Pembayaran Lain</a>
                     <a class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" href="history.php"
                         role="button">Cek History Lain</a>
                 </div>
